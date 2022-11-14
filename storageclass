@@ -3,3 +3,6 @@ kind: StorageClass
 metadata: 
   name: AWS-storage
 provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp2
+  replication-type: none
