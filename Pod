@@ -9,7 +9,7 @@ spec:
     volumeMounts:
     - mountPath: /opt
       name: data-volume
-   volumes:
+  volumes:
    - name: data-volume
      persistentVolumeClaim:
-      ClaimName: myclaim
+      claimName: myclaim
