@@ -1,8 +1,9 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata: 
-  name: AWS-storage
+  name: awsstorage
 provisioner: kubernetes.io/aws-ebs
+reclaimPolicy: Retain
 parameters:
-  type: gp2
+  storageaccounttype: gp2
   replication-type: none
