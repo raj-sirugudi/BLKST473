@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: random-number-generator
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    volumeMounts:
+    - mountPath: /opt
+      name: data-volume
+   volumes:
+   - name: data-volume
+     persistentVolumeClaim:
+      ClaimName: myclaim
